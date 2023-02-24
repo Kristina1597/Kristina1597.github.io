@@ -1,4 +1,4 @@
-import { introDescription, position } from '../../content/content';
+import { introDescription } from '../../content/content';
 import {
     Avatar,
     Box,
@@ -68,7 +68,7 @@ export const Intro = () => {
                         xs: 'center'
                     }
                 }}>
-                    {position}
+                    {/*{position}*/}
                 </Typography>
                 <ButtonGroup variant="text" aria-label="text button group">
                     <Box sx={{

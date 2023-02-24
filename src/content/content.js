@@ -3,23 +3,23 @@ import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import chartImage from "../assets/chart.png";
-import modalCounterImage from "../assets/modalCounter.png";
-import addressSearchImage from "../assets/addressSearch.png";
-import memoryCardsImage from "../assets/memoryCards.png";
-import socialMediaImage from "../assets/socialMedia.png";
-import weatherImage from "../assets/weather.png";
-import todoImage from "../assets/todo.png";
-import snakeImage from "../assets/snake.png";
-import activeBoxImage from "../assets/activeBox.png";
-import mogoImage from "../assets/mogo.png";
+import chartImage from '../assets/chart.png';
+import modalCounterImage from '../assets/modalCounter.png';
+import addressSearchImage from '../assets/addressSearch.png';
+import memoryCardsImage from '../assets/memoryCards.png';
+import socialMediaImage from '../assets/socialMedia.png';
+import weatherImage from '../assets/weather.png';
+import todoImage from '../assets/todo.png';
+import snakeImage from '../assets/snake.png';
+import activeBoxImage from '../assets/activeBox.png';
+import mogoImage from '../assets/mogo.png';
 
 export const city = 'Antalya';
 export const experience = '2+';
 export const companies = '2';
 export const projectsNumber = '5+';
 
-export const introDescription = `Hi, I'm Kristina a creative designer based in Turkey`;
+export const introDescription = `Hi, I'm Kristina! A middle frontend developer based in Turkey`;
 export const position = 'Frontend Developer';
 export const stackTechnologies = ['React', 'TypeScript', 'Redux', 'Redux-Thunk', 'Redux-Saga', 'JavaScript', 'Ajax', 'WebSocket',
     'Gatsby.js', 'Formik', 'MaterialUI', 'ChakraUI', 'HTML', 'CSS', 'SASS', 'Jest', 'JQuery', 'Git', 'Figma'];

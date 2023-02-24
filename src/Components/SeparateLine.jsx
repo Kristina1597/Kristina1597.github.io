@@ -9,7 +9,7 @@ export const SeparateLine = () => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        animation: 'marquee-infinite 25s linear infinite',
+        animation: 'marquee-infinite 100s linear infinite',
 
         '@keyframes marquee-infinite': {
             '0%': {
