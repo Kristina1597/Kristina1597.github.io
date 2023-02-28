@@ -1,20 +1,20 @@
 import { forwardRef } from 'react';
+import useTranslation from '../../CustomHooks/CustomHooks';
 import {
-    city,
-    commonDescription,
     companies,
     experience,
-    experienceDescription,
-    position,
     projectsNumber,
     stackTechnologies
 } from '../../content/content';
 import { Box, SvgIcon, Typography } from '@mui/material';
 import { ReactComponent as MainIcon } from './../../assets/mainIcon.svg';
 
-export const Description = forwardRef(({executeScroll}, ref) => {
+export const Description = forwardRef(({ executeScroll }, ref) => {
+    const translation = useTranslation();
+
     return (
-        <Box ref={ref} sx={{
+        <Box ref={ref}
+             sx={{
             display: 'flex',
             flexDirection: 'column',
             width: '100%'
@@ -45,13 +45,13 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                         marginBottom: '21px'
                     }}>
                         <Typography sx={{fontSize: '23px'}}>
-                            Kristina
+                            {translation.name}
                         </Typography>
                         <SvgIcon sx={{margin: '0 8px'}}
                                  component={MainIcon}
                                  inheritViewBox/>
                         <Typography sx={{fontSize: '23px'}}>
-                            Filchenko
+                            {translation.surname}
                         </Typography>
                     </Box>
                     <Box sx={{
@@ -59,8 +59,9 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                     }}>
                         <Typography sx={{
                             whiteSpace: 'pre-wrap'
-                        }} variant={'h2'}>
-                            {position}
+                        }}
+                                    variant={'h2'}>
+                            {translation.position}
                         </Typography>
                     </Box>
                 </Box>
@@ -69,11 +70,14 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                     flexDirection: 'column',
                     maxWidth: '598px'
                 }}>
-                    <Typography marginBottom={'20px'} variant={'h3'}>
-                        {commonDescription}
+                    <Typography marginBottom={'20px'}
+                                variant={'h3'}>
+                        {translation.commonDescription}
                     </Typography>
-                    {experienceDescription.map((i) =>
-                        <Typography marginBottom='10px' key={experienceDescription.indexOf(i)} variant={'body1'}>
+                    {translation.experienceDescription.map((i) =>
+                        <Typography marginBottom='10px'
+                                    key={i}
+                                    variant={'body1'}>
                             {i}
                         </Typography>
                     )}
@@ -99,7 +103,6 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                                 }}>
                                     <Typography sx={{
                                         color: '#ffffff',
-                                        // textDecoration: 'underline',
                                         marginRight: '5px'
                                     }}>
                                         {i}
@@ -107,7 +110,6 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                                 </Box>
                             )}
                         </Box>
-
                     </Box>
                     <Box sx={{
                         display: 'flex',
@@ -124,10 +126,10 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                                 marginBottom: '9px',
                                 color: '#E94D35'
                             }}>
-                                Live in
+                                {translation.liveIn}
                             </Typography>
                             <Typography variant={'h4'}>
-                                {city}
+                                {translation.city}
                             </Typography>
                         </Box>
                         <Box sx={{
@@ -139,10 +141,10 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                                 marginBottom: '9px',
                                 color: '#E94D35'
                             }}>
-                                Experience
+                                {translation.experience}
                             </Typography>
                             <Typography variant={'h4'}>
-                                {experience + ' year'}
+                                {experience + ' ' + translation.years}
                             </Typography>
                         </Box>
                         <Box sx={{
@@ -154,10 +156,10 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                                 marginBottom: '9px',
                                 color: '#E94D35'
                             }}>
-                                Date Of Birth
+                                {translation.dateOfBirth}
                             </Typography>
                             <Typography variant={'h4'}>
-                                30 October 1997
+                                {translation.dateOfBirthValue}
                             </Typography>
                         </Box>
                     </Box>
@@ -192,7 +194,7 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                     <Typography sx={{
                         textAlign: 'center'
                     }} variant={'body2'}>
-                        years of experience
+                        {translation.experienceYears}
                     </Typography>
                 </Box>
                 <Box sx={{
@@ -211,7 +213,7 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                     </Typography>
                     <Typography color='#ffffff'
                                 variant={'body2'}>
-                        projects
+                        {translation.projectsCount}
                     </Typography>
                 </Box>
                 <Box sx={{
@@ -226,7 +228,7 @@ export const Description = forwardRef(({executeScroll}, ref) => {
                         {companies}
                     </Typography>
                     <Typography variant={'body2'}>
-                        companies
+                        {translation.companiesCount}
                     </Typography>
                 </Box>
             </Box>

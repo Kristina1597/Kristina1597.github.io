@@ -14,6 +14,11 @@ import snakeImage from '../assets/snake.png';
 import activeBoxImage from '../assets/activeBox.png';
 import mogoImage from '../assets/mogo.png';
 
+export const languages = {
+    ru: 'ruRU',
+    en: 'enUS'
+};
+
 export const city = 'Antalya';
 export const experience = '2+';
 export const companies = '2';
@@ -201,7 +206,7 @@ export const petProjects = [
         description: 'Adaptive landing page made according to the layout',
         stack: ['HTML', 'CSS', 'JS'],
         screenshot: mogoImage
-    },
+    }
 ];
 
 

@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import useTranslation from '../CustomHooks/CustomHooks';
 import { Header } from '../Components/Header/Header';
 import { Intro } from '../Components/Intro/Intro';
 import { Description } from '../Components/DescriptionBlock/Description';
@@ -9,15 +10,15 @@ import { SeparateLine } from '../Components/SeparateLine';
 import { Box } from '@mui/material';
 
 export const MainPage = () => {
+    const translation = useTranslation();
+
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const petProjectsRef = useRef(null);
 
-    const navMenuItems = {
-        'About': aboutRef,
-        'Projects': projectsRef,
-        'Pet Projects': petProjectsRef,
-    };
+    const navMenuItemsKeys = translation.navMenuItems;
+    const navMenuItemsKeysValues = [aboutRef, projectsRef, petProjectsRef];
+    const navMenuItems = Object.assign(...navMenuItemsKeys.map((keys, i) => ({[keys]: navMenuItemsKeysValues[i]})));
 
     const executeScroll = (ref) => {
         ref.current.scrollIntoView({behavior: 'smooth'});

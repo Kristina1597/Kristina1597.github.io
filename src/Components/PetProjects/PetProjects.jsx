@@ -1,5 +1,5 @@
 import { forwardRef, useState } from 'react';
-import { petProjects } from '../../content/content';
+import useTranslation from '../../CustomHooks/CustomHooks';
 import { ReactComponent as additionalIcon } from './../../assets/additionalIcon.svg';
 import Image from 'mui-image';
 import {
@@ -11,6 +11,8 @@ import {
 } from '@mui/material';
 
 export const PetProjects = forwardRef(({ executeScroll }, ref) => {
+    const translation = useTranslation();
+
     const [showAll, setShowAll] = useState(false);
 
     const handleShowAllClick = () => {
@@ -27,7 +29,7 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
         <SvgIcon sx={{marginBottom: '22px', width: '40px', height: '40px'}} component={additionalIcon}
                  inheritViewBox/>
         <Typography variant={'h2'}>
-            Portfolio
+            {translation.portfolio}
         </Typography>
         <Typography sx={{
             textTransform: 'uppercase',
@@ -35,11 +37,12 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
                 sm: '61px',
                 xs: '30px'
             }
-        }} variant={'body1'}>my pet projects
+        }} variant={'body1'}>
+            {translation.petProjectsName}
         </Typography>
-        {petProjects.map((i) => {
+        {translation.petProjects.map((i) => {
                 if (!showAll) {
-                    return petProjects.indexOf(i) < 3 && <Box
+                    return translation.petProjects.indexOf(i) < 3 && <Box
                         key={i.name}
                         sx={{
                             width: '100%',
@@ -176,18 +179,36 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
                                     display: 'flex',
                                     flexDirection: 'row'
                                 }}>
-                                    <Typography sx={{marginRight: '10px'}}>Links:</Typography>
-                                    <Link color='#161513' sx={{
+                                    <Typography sx={{
+                                        marginRight: '10px'
+                                    }}>
+                                        Links:
+                                    </Typography>
+                                    <Link color='#161513'
+                                          sx={{
                                         marginRight: '10px',
-                                    }} href={i.links.github} target='_blank'>GitHub</Link>
+                                    }}
+                                          href={i.links.github}
+                                          target='_blank'>
+                                        <Typography>
+                                            GitHub
+                                        </Typography>
+                                    </Link>
                                     {i.links.codesandbox &&
-                                    <Link color='#161513' href={i.links.codesandbox} target='_blank'>Codesandbox</Link>}
+                                    <Link color='#161513'
+                                          href={i.links.codesandbox}
+                                          target='_blank'>
+                                        <Typography>
+                                            Codesandbox
+                                        </Typography>
+                                    </Link>
+                                    }
                                 </Box>
                             </Box>
                         </Box>
                     </Box>
                 }
-                return <Box sx={{
+                return <Box key={i.name} sx={{
                     width: '100%',
                     marginBottom: '95px',
                     justifyContent: 'space-around',
@@ -223,7 +244,6 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
                             {i.name}
                         </Typography>
                     </Box>
-
                     <Box sx={{
                         marginRight: {
                             sm: '44px',
@@ -318,12 +338,30 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
                                 display: 'flex',
                                 flexDirection: 'row'
                             }}>
-                                <Typography sx={{marginRight: '10px'}}>Links:</Typography>
-                                <Link color='#161513' sx={{
+                                <Typography sx={{
+                                    marginRight: '10px'
+                                }}>
+                                    Links:
+                                </Typography>
+                                <Link color='#161513'
+                                      sx={{
                                     marginRight: '10px',
-                                }} href={i.links.github} target='_blank'>GitHub</Link>
+                                }}
+                                      href={i.links.github}
+                                      target='_blank'>
+                                    <Typography>
+                                        GitHub
+                                    </Typography>
+                                </Link>
                                 {i.links.codesandbox &&
-                                <Link color='#161513' href={i.links.codesandbox} target='_blank'>Codesandbox</Link>}
+                                <Link color='#161513'
+                                      href={i.links.codesandbox}
+                                      target='_blank'>
+                                    <Typography>
+                                        Codesandbox
+                                    </Typography>
+                                </Link>
+                                }
                             </Box>
                         </Box>
                     </Box>
@@ -340,7 +378,7 @@ export const PetProjects = forwardRef(({ executeScroll }, ref) => {
             <Typography variant={'body1'} sx={{
                 fontFamily: 'sans-serif'
             }}>
-                {showAll ? 'Hide' : 'Show all'}
+                {showAll ? translation.hideButton : translation.showAllButton}
             </Typography>
         </Button>
     </Box>

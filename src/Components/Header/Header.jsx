@@ -1,11 +1,14 @@
 import * as React from 'react';
+import { useState } from 'react';
+import { useLanguageContext } from '../../Contexts/LanguageContext';
 import { socialMediaLinks } from '../../content/content';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Button, IconButton } from '@mui/material';
 
-export const Header = ({ navMenuItems, handleScrollToPage }) => {
+export const Header = ({navMenuItems, handleScrollToPage}) => {
+    const {language, changeLanguage} = useLanguageContext();
 
     const handleNavMenuItemClick = (page) => {
         handleScrollToPage(page);
@@ -28,7 +31,8 @@ export const Header = ({ navMenuItems, handleScrollToPage }) => {
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                alignItems: 'center'
             }}
             >
                 <Box sx={{
@@ -76,7 +80,8 @@ export const Header = ({ navMenuItems, handleScrollToPage }) => {
                         <IconButton
                             sx={{
                                 padding: {
-                                    sm: '15px',
+                                    md: '15px',
+                                    sm: '10px',
                                     xs: '5px'
                                 },
                                 marginLeft: '10px'
@@ -87,6 +92,42 @@ export const Header = ({ navMenuItems, handleScrollToPage }) => {
                             {i.icon}
                         </IconButton>
                     ))}
+                </Box>
+                <Box sx={{
+                    display: 'flex'
+                }}>
+                    {language === 'en' ?
+                        <Button disableRipple
+                                value='ru'
+                                color='main'
+                                sx={{
+                                    height: '30px',
+                                    width: '30px',
+                                    backgroundColor: 'transparent',
+                                    '&:hover': {
+                                        backgroundColor: 'transparent',
+                                    }
+                                }}
+                                onClick={(e) => changeLanguage(e.target.value)}
+                        >
+                            RU
+                        </Button>
+                        : <Button disableRipple
+                                  value='en'
+                                  color='main'
+                                  sx={{
+                                      height: '30px',
+                                      width: '30px',
+                                      backgroundColor: 'transparent',
+                                      '&:hover': {
+                                          backgroundColor: 'transparent',
+
+                                      }
+                                  }}
+                                  onClick={(e) => changeLanguage(e.target.value)}>
+                            EN
+                        </Button>
+                    }
                 </Box>
             </Box>
         </AppBar>

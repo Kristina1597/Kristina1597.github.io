@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { projects } from '../../content/content';
+import useTranslation from '../../CustomHooks/CustomHooks';
 import {
     Box,
     Link,
@@ -11,8 +11,8 @@ import {
 } from '@mui/material';
 import {ReactComponent as additionalIcon} from './../../assets/additionalIcon.svg';
 
-
 export const Projects = forwardRef(({ executeScroll }, ref) => {
+    const translation = useTranslation();
 
     const handleProjectClick = (e) => {
         e.stopPropagation();
@@ -37,7 +37,7 @@ export const Projects = forwardRef(({ executeScroll }, ref) => {
                 }}
             />
             <Typography variant={'h2'}>
-                Projects
+                {translation.projectsHeader.projects}
             </Typography>
             <Typography variant={'body1'}
                         sx={{
@@ -47,7 +47,7 @@ export const Projects = forwardRef(({ executeScroll }, ref) => {
                                 xs: '30px'
                             }
                         }}>
-                I have contributed to
+                {translation.projectsHeader.projectsContributedTo}
             </Typography>
             <Box sx={{
                 display: 'grid',
@@ -82,7 +82,7 @@ export const Projects = forwardRef(({ executeScroll }, ref) => {
                         "."`
                 }
             }}>
-                {projects.map((i) =>
+                {translation.projects.map((i) =>
                     <Box
                         key={i.name}
                         sx={{
@@ -109,7 +109,7 @@ export const Projects = forwardRef(({ executeScroll }, ref) => {
                                             sx={{
                                                 color: '#ffffff'
                                             }}>
-                                    {projects.indexOf(i) + 1}
+                                    {translation.projects.indexOf(i) + 1}
                                 </Typography>
                             </Box>
                             <Box sx={{
@@ -151,7 +151,7 @@ export const Projects = forwardRef(({ executeScroll }, ref) => {
                                     marginBottom: '15px'
                                 }}
                                             variant={'body1'}>
-                                    Responsibilities
+                                    {translation.responsibilities}
                                 </Typography>
                                 <List sx={{width: '80%'}} disablePadding>
                                     {i.responsibilities.map((r) =>

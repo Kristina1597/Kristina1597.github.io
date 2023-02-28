@@ -1,4 +1,3 @@
-import { introDescription } from '../../content/content';
 import {
     Avatar,
     Box,
@@ -9,8 +8,11 @@ import {
     Typography
 } from '@mui/material';
 import avatar from '../../assets/avatar.jpg'
+import useTranslation from '../../CustomHooks/CustomHooks';
 
 export const Intro = () => {
+    const translation = useTranslation();
+
     return (
         <Card sx={{
             display: 'flex',
@@ -39,7 +41,8 @@ export const Intro = () => {
                         xs: '100%'
                     }
                 }}>
-                    <Typography sx={{
+                    <Typography variant='h2'
+                                sx={{
                         marginBottom: '4px',
                         fontSize: {
                             lg: '56px',
@@ -52,7 +55,7 @@ export const Intro = () => {
                             xs: 'center'
                         }
                     }}>
-                        {introDescription}
+                        {translation.introDescription}
                     </Typography>
                 </Box>
                 <Typography sx={{
@@ -81,7 +84,7 @@ export const Intro = () => {
                             color: '#ffffff',
                             fontSize: '16px'
                         }}>
-                            Got a project?
+                            {translation.introGotProject}
                         </Typography>
                     </Box>
                     <Button sx={{
@@ -93,7 +96,7 @@ export const Intro = () => {
                         transition: 'backgroundColor .2s',
                         borderRadius: '0',
                         '&:hover': {
-                            backgroundColor: '#ECEAEAFF',
+                            backgroundColor: 'colorForBackground',
                             cursor: 'pointer'
                         }
                     }}>
@@ -102,7 +105,7 @@ export const Intro = () => {
                             textDecoration: 'none',
                             color: '#161513'
                         }}>
-                            Let's talk
+                            {translation.introLetsTalkButton}
                         </Link>
                     </Button>
                 </ButtonGroup>

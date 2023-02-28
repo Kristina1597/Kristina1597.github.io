@@ -1,18 +1,23 @@
 import { createTheme } from '@mui/material';
 
+const { palette } = createTheme();
+const { augmentColor } = palette;
+const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
+
 export let theme = createTheme({
     typography: {
         fontFamily: [
-            'Bai Jamjuree'
+            'BaiJamjuree',
         ].join(','),
         allVariants: {
+            fontFamily: 'Bai Jamjuree',
             color: '#161513',
         },
     },
     palette: {
-        colorForBackground: '#eceaea',
-        main: '#161513',
-        orange: '#E94D35'
+        colorForBackground: createColor('#eceaea'),
+        main: createColor('#161513'),
+        orange: createColor('#E94D35')
     },
     breakpoints: {
         values: {
@@ -23,7 +28,6 @@ export let theme = createTheme({
             xl: 1536,
         }
     }
-
 });
 
 theme.typography.h2 = {
@@ -35,7 +39,7 @@ theme.typography.h2 = {
         sx: '30px',
     },
     textTransform: 'uppercase',
-    lineHeight: '1.7'
+    fontFamily: 'Bai Jamjuree'
 };
 
 theme.typography.h3 = {
@@ -46,7 +50,8 @@ theme.typography.h3 = {
         sm: '22px',
         sx: '18px',
     },
-    lineHeight: '1.5'
+    lineHeight: '1.5',
+    fontFamily: 'Bai Jamjuree'
 };
 
 theme.typography.h4 = {
@@ -57,7 +62,8 @@ theme.typography.h4 = {
         sm: '16px',
         sx: '12px',
     },
-    lineHeight: '1.5'
+    lineHeight: '1.5',
+    fontFamily: 'Bai Jamjuree'
 };
 
 theme.typography.body1 = {
@@ -68,10 +74,11 @@ theme.typography.body1 = {
         sm: '14px',
         sx: '12px',
     },
-
+    fontFamily: 'Bai Jamjuree'
 };
 
 theme.typography.body2 = {
     fontWeight: '400',
     fontSize: '12px',
+    fontFamily: 'Bai Jamjuree'
 };
