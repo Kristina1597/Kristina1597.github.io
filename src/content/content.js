@@ -20,9 +20,9 @@ export const languages = {
 };
 
 export const city = 'Antalya';
-export const experience = '2+';
+export const experience = '2';
 export const companies = '2';
-export const projectsNumber = '5+';
+export const projectsNumber = '5';
 
 export const introDescription = `Hi, I'm Kristina! A middle frontend developer based in Turkey`;
 export const position = 'Frontend Developer';

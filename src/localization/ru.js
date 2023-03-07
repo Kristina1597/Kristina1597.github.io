@@ -22,11 +22,11 @@ export default {
     dateOfBirthValue: '30 Октября 1997',
     experience: 'Опыт',
     projectsCount: 'проектов',
-    companiesCount: 'компаний',
+    companiesCount: 'компании',
     commonDescription: 'В работе я всегда открыта к изучению новых технологий, так как возможность ' +
-        'узнать что-то новое и улучшить свои навыки очень важна для меняю',
+        'узнать что-то новое и улучшить свои навыки очень важна для меня',
     experienceDescription: [
-        'На первом месте работы Я работала frontend-разработчиком в команде с разработчиком, у которого было ' +
+        'На первом месте я работала frontend-разработчиком в команде с разработчиком, у которого было ' +
         'несколько проектов. В моем ведении было три проекта: сайт по страхованию недвижимости, сайт по оформлению ' +
         'спортивных страховок и листинг инвестиционных проектов и инвесторов. Затем моей задачей было создание ' +
         'стартера для будущих проектов, связанных со страхованием. С помощью стартера создание нового сайта стало ' +
@@ -73,7 +73,7 @@ export default {
         {
             name: 'Мой шлем',
             link: 'https://www.moishlem.ru/',
-            description: 'Сайт по оформлениб спортивных страховок',
+            description: 'Сайт по оформлению спортивных страховок',
             responsibilities: ['оптимизация и расширение функционала имеющегося кода', 'доработка существующего проекта',
                 'создание новых компонентов', 'написание скриптов', 'рефакторинг кода'],
             stack: ['React', 'Redux', 'Gatsby.js', 'GraphQl', 'Formik', 'MaterialUI', 'ChakraUI', 'Airtable']
@@ -143,7 +143,7 @@ export default {
                 github: 'https://github.com/Kristina1597/weather-app',
                 codesandbox: 'https://codesandbox.io/p/github/Kristina1597/weather-app/master?workspaceId=6a662633-ad5a-4fdd-a93f-d41b4a6142e0&file=%2FREADME.md&workspace=%257B%2522activeFileId%2522%253A%2522cleebbjj40019g4ej46eh7l6n%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522cleebbl39000x356ifv4banbl%2522%253A%257B%2522key%2522%253A%2522cleebbl39000x356ifv4banbl%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522key%2522%253A%2522cleebbl39000y356iup9fdpjq%2522%252C%2522type%2522%253A%2522PROJECT_SETUP%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522cleebbl39000x356ifv4banbl%2522%252C%2522spacesOrder%2522%253A%255B%2522cleebbl39000x356ifv4banbl%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D'
             },
-            description: 'Приложение, отобрающие погоду и другие показатели в выбранном городе',
+            description: 'Приложение, отображающее погоду и другие показатели в выбранном городе',
             stack: ['JavaScript', 'Canvas', 'CSS', 'HTML'],
             screenshot: weatherImage
         },
@@ -163,7 +163,7 @@ export default {
                 github: 'https://github.com/Kristina1597/Game-Snake-',
                 codesandbox: 'https://codesandbox.io/p/github/Kristina1597/Game-Snake-/main?workspaceId=6a662633-ad5a-4fdd-a93f-d41b4a6142e0&workspace=%257B%2522activeFileId%2522%253Anull%252C%2522openFiles%2522%253A%255B%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522cleeb8d0h000e356jz0ciwbsu%2522%253A%257B%2522key%2522%253A%2522cleeb8d0h000e356jz0ciwbsu%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522key%2522%253A%2522cleeb8d0h000f356jpqjn7te2%2522%252C%2522type%2522%253A%2522PROJECT_SETUP%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522cleeb8d0h000e356jz0ciwbsu%2522%252C%2522spacesOrder%2522%253A%255B%2522cleeb8d0h000e356jz0ciwbsu%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D'
             },
-            description: 'Популярна игра со змейкой, где нужно собирать еду и заработывать очки',
+            description: 'Популярная игра со змейкой, где нужно собирать еду и заработывать очки',
             stack: ['JavaScript', 'Canvas', 'CSS', 'HTML'],
             screenshot: snakeImage
         },
